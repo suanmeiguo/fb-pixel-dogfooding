@@ -17,7 +17,9 @@
           id: '102',
           quantity: 2
         }],
-      content_type: 'product'
+      compared_product: 'recommended-banner-shoes',  // custom property
+      content_type: 'product',
+      delivery_category: 'in_store'
     };
     fbq('track', event, params);
     document.getElementById("event").innerHTML = event;
