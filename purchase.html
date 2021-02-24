@@ -5,7 +5,20 @@
   <script>
     var value = Math.floor(Math.random() * Math.floor(100));
     var event = 'Purchase';
-    var params = {currency: "USD", value: value};
+    var params ={
+      value: value,
+      currency: 'USD',
+      contents: [
+        {
+          id: '101',
+          quantity: 1
+        },
+        {
+          id: '102',
+          quantity: 2
+        }],
+      content_type: 'product'
+    };
     fbq('track', event, params);
     document.getElementById("event").innerHTML = event;
     document.getElementById("parameter").innerHTML = JSON.stringify(params);
