@@ -1,0 +1,10 @@
+<html>
+  <script src="pixel.js"></script>
+  <script>
+    var value = Math.floor(Math.random() * Math.floor(100));
+    var event = 'Purchase';
+    var params = {currency: "USD", value: value};
+    fbq('track', event, params);
+    console.log(event, params);
+  </script>
+</html>
