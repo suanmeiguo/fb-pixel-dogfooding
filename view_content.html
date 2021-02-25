@@ -1,0 +1,29 @@
+<html>
+  <div id="event"></div>
+  <div id="parameter"></div>
+  <script src="pixel.js"></script>
+  <script>
+    var value = Math.floor(Math.random() * Math.floor(100));
+    var event = 'ViewContent';
+    var params = {
+      value: value,
+      currency: 'USD',
+      contents: [
+        {
+          id: '101',
+          quantity: 1
+        },
+        {
+          id: '102',
+          quantity: 2
+        }],
+      compared_product: 'recommended-banner-pants',  // custom property
+      content_type: 'product',
+      delivery_category: 'in_store'
+    };
+    fbq('track', event, params);
+    document.getElementById("event").innerHTML = event;
+    document.getElementById("parameter").innerHTML = JSON.stringify(params);
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3858887124169744&ev=PageView&noscript=1"/></noscript>
+</html>
