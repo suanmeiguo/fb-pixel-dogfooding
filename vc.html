@@ -5,10 +5,8 @@
   <script>
     var value = Math.floor(Math.random() * Math.floor(100));
     var event = 'ViewContent';
-    var curr_day = new Date().getDay();
-    var event_id = (Math.floor(curr_day + Math.random() * 5)).toString();
     var params = {
-      event_id: event_id,
+      event_id: new Date(),
       value: value,
       currency: 'USD',
       contents: [
