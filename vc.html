@@ -5,8 +5,8 @@
   <script>
     var value = Math.floor(Math.random() * Math.floor(100));
     var event = 'ViewContent';
+    var event_id = new Date();
     var params = {
-      event_id: new Date(),
       value: value,
       currency: 'USD',
       contents: [
@@ -22,7 +22,7 @@
       content_type: 'product',
       delivery_category: 'in_store'
     };
-    fbq('track', event, params);
+    fbq('track', event, params, {eventID: event_id});
     document.getElementById("event").innerHTML = event;
     document.getElementById("parameter").innerHTML = JSON.stringify(params);
   </script>
